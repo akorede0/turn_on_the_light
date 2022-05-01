@@ -11,16 +11,29 @@
 
     <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
 
-    <p>
-    <button type="button" onclick="light(1)">Turn on the light</button>
     
-    <img id="bulb" src="pic_bulboff.gif" width="100px">
+    <button id="myBtn1">Turn on the light</button>
+    
+    <img id="myImage" src="img/pic_bulboff.gif" style= "width:100px">
 
-    <button type="button" onclick="light(0)">Turn off the light</button>
-    </p>
+    <button id="myBtn2">Turn off the light</button>
+    
 
+    <!-- Internal Javascript -->
+    <script>
+        const Btn1 = document.getElementById("myBtn1");
+        const Btn2 = document.getElementById("myBtn2");
+        var img = document.getElementById("myImage");
 
-<script src="js/script.js"></script>
+        Btn1.addEventListener("click",function(){
+            img.src="img/pic_bulbon.gif";
+        })
+
+        Btn2.addEventListener("click",function(){
+            img.src="img/pic_bulboff.gif"; 
+        })
+
+    </script>
 
 </body>
 </html>
